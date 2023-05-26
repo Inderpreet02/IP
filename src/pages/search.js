@@ -6,6 +6,7 @@ const Search = () => {
 
     const [pickup, setPickup] = useState("")
     const [dropoff, setDropoff] = useState("")
+    const [username, setUsername] = useState("")
   return (
     <Wrapper>
       <ButtonContainer>
@@ -23,6 +24,7 @@ const Search = () => {
         <InputBoxes>
           <Input placeholder="Enter pickup location" onChange={(e) => setPickup(e.target.value)} value={pickup}/>
           <Input placeholder="Where to?" onChange={(e) => setDropoff(e.target.value)} value={dropoff}/>
+          <Input placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
         </InputBoxes>
         <Plus src="https://img.icons8.com/ios/50/9CA3Af/plus-math.png" />
       </InputContainer>
@@ -36,6 +38,7 @@ const Search = () => {
           query: {
             pickup: pickup,
             dropoff: dropoff,
+            username: username
           },
         }}
       >

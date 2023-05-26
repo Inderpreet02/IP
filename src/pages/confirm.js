@@ -7,7 +7,7 @@ import RideSelector from "./components/RideSelector";
 
 const confirm = () => {
   const router = useRouter();
-  const { pickup, dropoff } = router.query;
+  const { pickup, dropoff, username } = router.query;
 
   const [pickupCoordinates, setPickupCoordinates] = useState([0, 0]);
   const [dropoffCoordinates, setDropoffCoordinates] = useState([0, 0]);
@@ -64,9 +64,12 @@ const confirm = () => {
           dropoffCoordinates={dropoffCoordinates}
           pickup={pickup}
           dropoff={dropoff}
+          username={username}
         />
         <ComfirmButtonContainer>
-          <ConfirmButton>Confirm Ride</ConfirmButton>
+          <Link href="/final">
+            <ConfirmButton>Confirm Ride</ConfirmButton>
+          </Link>
         </ComfirmButtonContainer>
       </RideContainer>
     </Wrapper>

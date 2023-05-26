@@ -8,9 +8,7 @@ const Final = () => {
   const { pickup, dropoff } = router.query;
   return (
     <Wrapper>
-      <MapContainer>
-        <Map pickupCoordinates={pickup} dropoffCoordinates={dropoff}/>
-      </MapContainer>
+      Your Driver will near you soon
     </Wrapper>
   );
 };
@@ -18,7 +16,7 @@ const Final = () => {
 export default Final;
 
 const Wrapper = tw.div`
-    flex h-screen flex-col
+    flex h-screen items-center justify-center text-xl font-bold
 `;
 const MapContainer = tw.div`
     flex h-screen flex-col

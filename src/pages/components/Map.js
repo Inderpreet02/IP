@@ -27,9 +27,15 @@ const Map = ({ pickupCoordinates, dropoffCoordinates }) => {
         padding: 60,
       });
     }
-
+    var timer;
     if(pickupCoordinates !== undefined){
-      getRoute(map, pickupCoordinates, dropoffCoordinates);
+      timer = setTimeout(() => {
+        getRoute(map, pickupCoordinates, dropoffCoordinates);        
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timer);
     }
   }, [pickupCoordinates, dropoffCoordinates]);
 

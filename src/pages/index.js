@@ -1,7 +1,6 @@
 import Link from "next/link";
 import tw from "tailwind-styled-components";
 import Map from "./components/Map";
-import Konoha from "./konoha.jpg";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       <Map />
       <ActionItems>
         <Header>
-          <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
+          <UberLogo src="/konoha.jpg" />
           <Profile>
             <Name>Gaben O'Neal</Name>
             <UserImage src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1200px-User-avatar.svg.png" />
@@ -40,7 +39,7 @@ export default function Home() {
 }
 
 const Wrapper = tw.div`
-  flex flex-col h-screen
+  flex flex-col h-screen 
 `;
 
 const ActionItems = tw.div`
@@ -50,7 +49,7 @@ const Header = tw.div`
   flex justify-between items-center
 `;
 const UberLogo = tw.img`
-  h-28
+  h-20 m-4
 `;
 const Profile = tw.div`
   flex items-center
